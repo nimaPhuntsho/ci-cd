@@ -7,6 +7,6 @@ describe("first test", () => {
   });
 
   it("should return another 43", () => {
-    expect(failedTest()).toBe(32);
+    expect(failedTest()).toBe(43);
   });
 });
