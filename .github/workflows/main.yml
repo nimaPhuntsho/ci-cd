@@ -7,25 +7,6 @@ on:
     branches: [main]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    outputs:
-      node-modules-cache: ${{ steps.cache.outputs.cache-hit }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run Build
-        run: npm run build
-
   test:
     needs: build               # 👈 Waits for the build job to finish
     runs-on: ubuntu-latest
@@ -43,3 +24,17 @@ jobs:
 
       - name: Run Tests
         run: npm test
+
+  build: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with: 
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm intall
+
+      - name: Run Build
+        run: npm run build
