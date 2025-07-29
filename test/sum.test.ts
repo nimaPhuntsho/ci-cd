@@ -11,6 +11,6 @@ describe("first test", () => {
   });
 
   it("should return 43 again for feature one", () => {
-    expect(featureOne()).toBe(4);
+    expect(featureOne()).toBe(43);
   });
 });
