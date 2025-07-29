@@ -1,0 +1,31 @@
+# Node dependencies
+node_modules/
+
+# Output from TypeScript
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Optional npm cache directory
+.npm/
+
+# dotenv file
+.env
+
+# Jest coverage
+coverage/
+
+# VS Code settings
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
