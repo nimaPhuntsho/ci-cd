@@ -1,11 +1,12 @@
-export async function getNumber(): Promise<number> {
-  return 43;
-}
+import express from "express";
+const app = express();
 
-export function failedTest(): number {
-  return 43;
-}
+app.get("/", (req, res) => {
+  console.log("this changes are made by nima, submited for pr ");
 
-export function featureOne(): number {
-  return 43;
-}
+  res.send({ message: "docker file" });
+});
+
+app.listen(3000, "0.0.0.0", () => {
+  console.log(`Listening on port ${3000}`);
+});
